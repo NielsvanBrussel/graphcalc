@@ -1,0 +1,167 @@
+@import '../styles/shared/colours';
+@import '../styles/shared/fonts';
+
+
+
+@keyframes input-focus-inverted {
+    0% {
+        border-bottom: solid 2px $colour-blue-light;
+        color: $colour-blue-light;
+    }
+    100% {
+        border-bottom: solid 2px $colour-blue-medium;
+        color: $colour-blue-medium;
+    }
+}
+
+@keyframes fading-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes fading-in {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes create-error {
+    0% {
+        border: white solid 0.15rem;
+    }
+    100% {
+        border: red solid 0.15rem;
+    }
+}
+
+.container {
+     display: flex; 
+     flex-direction: row; 
+     width: 48%;
+     justify-content: flex-start;
+     gap: 1rem;
+     align-items: center;
+     margin: 1rem 0rem;
+     animation: fading-in 0.5s linear;
+}
+
+.label__container {
+    display: flex; 
+     flex-direction: row; 
+     width: 100%;
+     justify-content: flex-start;
+     gap: 1rem;
+     align-items: center;
+}
+
+.invalid {
+    border: red solid 0.15rem;
+    box-sizing: border-box;
+    display:inline-block;
+    animation: create-error 0.5s linear;
+    .formula__form{
+        margin: 0.35rem !important;
+    }
+}
+
+.valid {
+    border: 2px solid $colour-blue-light;
+    box-sizing: border-box;
+    display:inline-block;
+    .formula__form{
+        margin: 0.35rem !important;
+    }
+}
+
+.formula__container {
+    margin: 0;
+    width: 100%;
+    
+    background-color: white;
+    color: $colour-blue-medium;
+    position: relative;
+    .formula__form {
+        display: flex;
+        flex-direction: column;
+        margin: 0.5rem;
+        .formula__colour {
+            height: 1rem;
+            width: 1rem;
+            min-height: 1.25rem;
+            min-width: 1.25rem;
+            margin: auto 0;
+        }
+        .formula__label {
+            margin: 0rem 1rem;
+            color: inherit;
+            opacity: 1;
+            font-size: 1rem;
+            font-family: "Barlow-Regular";
+            .label__text{
+                font-size: 1.25rem;
+                margin: auto 0;
+            }
+        }
+        .formula__input {
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            color: inherit;
+            width: calc(100% - 2rem);
+            margin: 0.25rem 1rem;
+            padding: 0.5rem 0rem; 
+            outline: none;
+            font-size: 1.25rem;
+            font-family: "Barlow-Regular";
+            border-bottom: solid 2px $colour-blue-light;
+            color: $colour-blue-light;
+        }
+        .formula__input::placeholder {
+            color: $colour-blue-light;
+        }
+        .formula__input:focus {
+            border-bottom: solid 2px $colour-blue-medium;
+            color: $colour-blue-medium;
+            animation: input-focus-inverted 0.5s linear;
+        } 
+    }  
+    .formula__form:focus-within {
+        .formula__label {
+             opacity: 0.5;
+             animation: fading-out 0.5s linear;
+        } 
+    }
+    .closebutton__container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0.25rem;
+        .errorbutton {
+            color: red;
+            cursor: pointer;
+        }
+        .closebutton {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        .closebutton:hover {
+            opacity: 1;
+            animation: fading-in 0.5s linear;
+        }
+    }
+}
+
+
+@media(max-width: 56rem){
+    .container {
+        width: 100%;
+    }
+}

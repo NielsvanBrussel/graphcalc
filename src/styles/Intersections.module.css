@@ -1,0 +1,40 @@
+.section__container {
+  margin: 2rem 0rem;
+  border: white solid 2px;
+  width: auto;
+  background-color: #191F45;
+}
+
+.section__container .section__content {
+  padding: 3rem 3vw 4rem 3vw;
+  color: white;
+  background-color: #191F45;
+}
+
+.section__container .section__header__container {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.section__container .section__header__container .section__header {
+  text-align: center;
+  margin: 0;
+}
+
+.section__container .selection__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section__container .selection__container .iconbox {
+  margin: 1.25rem 0 auto 0;
+}
+/*# sourceMappingURL=Intersections.module.css.map */

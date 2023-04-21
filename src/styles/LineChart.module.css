@@ -1,0 +1,309 @@
+.button__container {
+  margin: 1rem 0;
+}
+
+.button {
+  text-decoration: none;
+  color: white;
+  border: white solid 2px;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 3px 3px #ababab;
+          box-shadow: 3px 3px #ababab;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  font-size: 1.125rem;
+  background-color: #0d1025;
+  font-family: "Barlow-Regular";
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.button:active {
+  -webkit-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.7) inset;
+  border: solid white 2px;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.7) inset;
+}
+
+.controls__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+}
+
+.controls__container .controls__container__checkboxes {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.controls__container .controls__container__checkboxes .checkbox__container__outer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0rem;
+  color: white;
+}
+
+.controls__container .controls__container__checkboxes .checkbox__container__outer .checkbox__container__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  color: white;
+  width: 100%;
+}
+
+.controls__container .controls__container__checkboxes .checkbox__container__outer .checkbox__container__inner .checkbox {
+  color: white;
+  cursor: pointer;
+}
+
+.controls__container .controls__container__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 45%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 1rem;
+}
+
+.controls__container .controls__container__inputs .input__container {
+  border: solid 2px #7a7f9d;
+  width: 12vw;
+  margin: auto 0;
+}
+
+.tab__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 10%;
+}
+
+.tab__title .input {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  width: 100%;
+  outline: none;
+  font-size: 1.25rem;
+  font-family: "Barlow-Regular";
+  margin: 0;
+  padding: 0;
+}
+
+.tabs__container {
+  margin: 2rem 0rem;
+  border: white solid 2px;
+  width: auto;
+  min-height: 30rem;
+  background-color: #191F45;
+}
+
+.tabs__container .tabs__nav {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.tabs__container .tabs__nav .tabs__nav__item, .tabs__container .tabs__nav .tabs__nav__item__active {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  border-right: white solid 2px;
+  width: 100%;
+}
+
+.tabs__container .tabs__nav .tabs__nav__item p, .tabs__container .tabs__nav .tabs__nav__item__active p {
+  padding: 0;
+  margin: 0;
+}
+
+.tabs__container .tabs__nav .tabs__nav__item__active:last-child {
+  border-right: none !important;
+}
+
+.tabs__container .tabs__nav .tabs__nav__item__icon {
+  opacity: 0.7;
+}
+
+.tabs__container .tabs__nav .tabs__nav__item__icon:hover {
+  opacity: 1 !important;
+}
+
+.tabs__container .tabs__nav .tabs__nav__item__add {
+  padding: 1rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: white solid 2px;
+  background-color: #0d1025;
+  opacity: 1;
+}
+
+.tabs__container .tabs__nav .tabs__nav__item {
+  border-bottom: white solid 2px;
+  background-color: #0d1025;
+  cursor: pointer;
+}
+
+.tabs__container .tabs__nav .tabs__nav__item p {
+  opacity: 0.3;
+}
+
+.tabs__container .tabs__nav .tabs__nav__item__active {
+  background-color: #191F45;
+}
+
+.tabs__container .tabs__nav .tabs__nav__item__active p {
+  opacity: 1;
+}
+
+.tabs__container .tabs__content {
+  padding: 2rem 3vw;
+  color: white;
+  background-color: #191F45;
+}
+
+.tabs__container .tabs__content .tabs__content__item {
+  display: none;
+}
+
+.tabs__container .tabs__content .tabs__content__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 56rem) {
+  .controls__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .controls__container .controls__container__checkboxes {
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 2rem;
+  }
+  .controls__container .controls__container__checkboxes .checkbox__container__outer {
+    width: 50%;
+  }
+  .controls__container .controls__container__inputs {
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 2rem;
+  }
+  .controls__container .controls__container__inputs .input__container {
+    width: 50%;
+  }
+  .formula__controls__container__inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=LineChart.module.css.map */

@@ -1,0 +1,31 @@
+@import '../styles/shared/colours';
+
+
+.section__container {
+    margin: 2rem 0rem;
+    border: white solid 2px;
+    width: auto;
+    background-color: $colour-blue-medium;
+    .section__content {
+        padding: 3rem 3vw 4rem 3vw;
+        color: white;
+        background-color: $colour-blue-medium;
+    }
+    .section__header__container {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 2rem;
+        .section__header {
+            text-align: center;
+            margin: 0;
+        }
+    }
+    .selection__container {
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+            .iconbox {
+                margin: 1.25rem 0 auto 0;
+            }
+    }
+}

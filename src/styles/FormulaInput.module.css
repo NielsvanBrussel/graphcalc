@@ -1,0 +1,259 @@
+@font-face {
+  font-family: "Barlow-Regular";
+  font-style: normal;
+  font-weight: 200;
+  src: url("/assets/fonts/BarlowCondensed-Regular.ttf") format("truetype");
+}
+
+@-webkit-keyframes input-focus-inverted {
+  0% {
+    border-bottom: solid 2px #7a7f9d;
+    color: #7a7f9d;
+  }
+  100% {
+    border-bottom: solid 2px #191F45;
+    color: #191F45;
+  }
+}
+
+@keyframes input-focus-inverted {
+  0% {
+    border-bottom: solid 2px #7a7f9d;
+    color: #7a7f9d;
+  }
+  100% {
+    border-bottom: solid 2px #191F45;
+    color: #191F45;
+  }
+}
+
+@-webkit-keyframes fading-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fading-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@-webkit-keyframes fading-in {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fading-in {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes create-error {
+  0% {
+    border: white solid 0.15rem;
+  }
+  100% {
+    border: red solid 0.15rem;
+  }
+}
+
+@keyframes create-error {
+  0% {
+    border: white solid 0.15rem;
+  }
+  100% {
+    border: red solid 0.15rem;
+  }
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 48%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0rem;
+  -webkit-animation: fading-in 0.5s linear;
+          animation: fading-in 0.5s linear;
+}
+
+.label__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.invalid {
+  border: red solid 0.15rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  -webkit-animation: create-error 0.5s linear;
+          animation: create-error 0.5s linear;
+}
+
+.invalid .formula__form {
+  margin: 0.35rem !important;
+}
+
+.valid {
+  border: 2px solid #7a7f9d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+}
+
+.valid .formula__form {
+  margin: 0.35rem !important;
+}
+
+.formula__container {
+  margin: 0;
+  width: 100%;
+  background-color: white;
+  color: #191F45;
+  position: relative;
+}
+
+.formula__container .formula__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0.5rem;
+}
+
+.formula__container .formula__form .formula__colour {
+  height: 1rem;
+  width: 1rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+  margin: auto 0;
+}
+
+.formula__container .formula__form .formula__label {
+  margin: 0rem 1rem;
+  color: inherit;
+  opacity: 1;
+  font-size: 1rem;
+  font-family: "Barlow-Regular";
+}
+
+.formula__container .formula__form .formula__label .label__text {
+  font-size: 1.25rem;
+  margin: auto 0;
+}
+
+.formula__container .formula__form .formula__input {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  width: calc(100% - 2rem);
+  margin: 0.25rem 1rem;
+  padding: 0.5rem 0rem;
+  outline: none;
+  font-size: 1.25rem;
+  font-family: "Barlow-Regular";
+  border-bottom: solid 2px #7a7f9d;
+  color: #7a7f9d;
+}
+
+.formula__container .formula__form .formula__input::-webkit-input-placeholder {
+  color: #7a7f9d;
+}
+
+.formula__container .formula__form .formula__input:-ms-input-placeholder {
+  color: #7a7f9d;
+}
+
+.formula__container .formula__form .formula__input::-ms-input-placeholder {
+  color: #7a7f9d;
+}
+
+.formula__container .formula__form .formula__input::placeholder {
+  color: #7a7f9d;
+}
+
+.formula__container .formula__form .formula__input:focus {
+  border-bottom: solid 2px #191F45;
+  color: #191F45;
+  -webkit-animation: input-focus-inverted 0.5s linear;
+          animation: input-focus-inverted 0.5s linear;
+}
+
+.formula__container .formula__form:focus-within .formula__label {
+  opacity: 0.5;
+  -webkit-animation: fading-out 0.5s linear;
+          animation: fading-out 0.5s linear;
+}
+
+.formula__container .closebutton__container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.25rem;
+}
+
+.formula__container .closebutton__container .errorbutton {
+  color: red;
+  cursor: pointer;
+}
+
+.formula__container .closebutton__container .closebutton {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.formula__container .closebutton__container .closebutton:hover {
+  opacity: 1;
+  -webkit-animation: fading-in 0.5s linear;
+          animation: fading-in 0.5s linear;
+}
+
+@media (max-width: 56rem) {
+  .container {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=FormulaInput.module.css.map */

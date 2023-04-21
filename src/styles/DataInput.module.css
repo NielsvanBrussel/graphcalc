@@ -1,0 +1,25 @@
+.data__input__container__active {
+  margin: 1rem 0rem;
+  padding: 0rem 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 45%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: black solid 1px;
+  background-color: white;
+}
+
+.data__input__container__inactive {
+  display: none;
+}
+/*# sourceMappingURL=DataInput.module.css.map */

@@ -1,0 +1,41 @@
+.header {
+  width: 15rem;
+  position: fixed;
+  height: 100vh;
+  z-index: 2;
+  border-right: 3px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: #191F45;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.nav__sidebar__li {
+  width: 100%;
+}
+
+.nav__sidebar__li .nav__sidebar__navlink__active {
+  background-color: white;
+  color: #191F45;
+}
+
+.nav__sidebar__li .nav__sidebar__navlink {
+  color: white;
+}
+
+.nav__sidebar__li .nav__sidebar__navlink, .nav__sidebar__li .nav__sidebar__navlink__active {
+  display: block;
+  padding: 1rem 1rem;
+  text-decoration: none;
+}
+/*# sourceMappingURL=App.module.css.map */

@@ -1,0 +1,109 @@
+@import '../styles/shared/colours';
+@import '../styles/shared/fonts';
+
+
+
+@keyframes input-focus-inverted {
+    0% {
+        border-bottom: solid 2px $colour-blue-light;
+        color: $colour-blue-light;
+    }
+    100% {
+        border-bottom: solid 2px $colour-blue-medium;
+        color: $colour-blue-medium;
+    }
+}
+
+@keyframes fading-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes fading-in {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    margin: 0rem 0rem;
+    width: 100%;
+    .form {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0.5rem;
+        .label {
+            margin: 0rem 1rem;
+            color: inherit;
+            opacity: 1;
+            font-size: 1rem;
+            font-family: "Barlow-Regular";
+        }
+        .input {
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            color: inherit;
+            width: calc(100% - 2rem);
+            margin: 0.25rem 1rem;
+            padding: 0.5rem 0rem; 
+            outline: none;
+            font-size: 1.25rem;
+            font-family: "Barlow-Regular";
+        } 
+    }  
+    .form:focus-within {
+        .label {
+             opacity: 0.5;
+             animation: fading-out 0.5s linear;
+        } 
+    }
+}
+
+.default {
+    background-color: $colour-blue-medium;
+    color: white;
+    .form {
+        .input {
+            border-bottom: solid 2px white;
+        }
+        .input::placeholder {
+            color: white;
+            opacity: 0.5;
+        }
+        .input:focus {
+            
+        }
+    }
+}
+
+.inverted {
+    background-color: white;
+    color: $colour-blue-medium;
+    .form {
+        .input {
+            border-bottom: solid 2px $colour-blue-light;
+            color: $colour-blue-light;
+        }
+        .input::placeholder {
+            color: $colour-blue-light;
+        }
+        .input:focus {
+            border-bottom: solid 2px $colour-blue-medium;
+            color: $colour-blue-medium;
+            animation: input-focus-inverted 0.5s linear;
+        }
+    }
+}
+
+
+
+
+

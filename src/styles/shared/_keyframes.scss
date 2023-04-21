@@ -1,0 +1,39 @@
+@keyframes fading-out {
+    100% {
+        opacity: 1;
+        display: flex;
+    }
+    0% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes fading-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes expand {
+    0% {
+        margin-top: -50%;
+    }
+    100% {
+        margin-top: 0%;
+    }
+}

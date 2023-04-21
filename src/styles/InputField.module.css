@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "Barlow-Regular";
+  font-style: normal;
+  font-weight: 200;
+  src: url("/assets/fonts/BarlowCondensed-Regular.ttf") format("truetype");
+}
+
+@-webkit-keyframes input-focus-inverted {
+  0% {
+    border-bottom: solid 2px #7a7f9d;
+    color: #7a7f9d;
+  }
+  100% {
+    border-bottom: solid 2px #191F45;
+    color: #191F45;
+  }
+}
+
+@keyframes input-focus-inverted {
+  0% {
+    border-bottom: solid 2px #7a7f9d;
+    color: #7a7f9d;
+  }
+  100% {
+    border-bottom: solid 2px #191F45;
+    color: #191F45;
+  }
+}
+
+@-webkit-keyframes fading-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fading-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@-webkit-keyframes fading-in {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fading-in {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  margin: 0rem 0rem;
+  width: 100%;
+}
+
+.container .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 0.5rem;
+}
+
+.container .form .label {
+  margin: 0rem 1rem;
+  color: inherit;
+  opacity: 1;
+  font-size: 1rem;
+  font-family: "Barlow-Regular";
+}
+
+.container .form .input {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  width: calc(100% - 2rem);
+  margin: 0.25rem 1rem;
+  padding: 0.5rem 0rem;
+  outline: none;
+  font-size: 1.25rem;
+  font-family: "Barlow-Regular";
+}
+
+.container .form:focus-within .label {
+  opacity: 0.5;
+  -webkit-animation: fading-out 0.5s linear;
+          animation: fading-out 0.5s linear;
+}
+
+.default {
+  background-color: #191F45;
+  color: white;
+}
+
+.default .form .input {
+  border-bottom: solid 2px white;
+}
+
+.default .form .input::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.default .form .input:-ms-input-placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.default .form .input::-ms-input-placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.default .form .input::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.inverted {
+  background-color: white;
+  color: #191F45;
+}
+
+.inverted .form .input {
+  border-bottom: solid 2px #7a7f9d;
+  color: #7a7f9d;
+}
+
+.inverted .form .input::-webkit-input-placeholder {
+  color: #7a7f9d;
+}
+
+.inverted .form .input:-ms-input-placeholder {
+  color: #7a7f9d;
+}
+
+.inverted .form .input::-ms-input-placeholder {
+  color: #7a7f9d;
+}
+
+.inverted .form .input::placeholder {
+  color: #7a7f9d;
+}
+
+.inverted .form .input:focus {
+  border-bottom: solid 2px #191F45;
+  color: #191F45;
+  -webkit-animation: input-focus-inverted 0.5s linear;
+          animation: input-focus-inverted 0.5s linear;
+}
+/*# sourceMappingURL=InputField.module.css.map */

@@ -1,0 +1,142 @@
+@-webkit-keyframes fading-out {
+  100% {
+    opacity: 1;
+    display: -webkit-box;
+    display: flex;
+  }
+  0% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes fading-out {
+  100% {
+    opacity: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  0% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@-webkit-keyframes fading-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fading-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes expand {
+  0% {
+    margin-top: -50%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+
+@keyframes expand {
+  0% {
+    margin-top: -50%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 0 auto 0;
+  position: relative;
+}
+
+.container__inner {
+  position: absolute;
+  background-color: white;
+  color: #191F45;
+  width: 100%;
+  border: solid #7a7f9d 2px;
+}
+
+.selection__displaybox {
+  padding: 0rem 1rem;
+}
+
+.selection__item__selected, .selection__item__option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.selection__item__selected {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.selection__item__option {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0rem 1rem;
+}
+
+.selection__item__option:hover {
+  background-color: #7a7f9d !important;
+}
+
+.formula__colour {
+  height: 1rem;
+  width: 1rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+  margin: auto 0;
+}
+
+.dropdown__container__outer {
+  overflow: hidden;
+  border-top: solid #7a7f9d 2px;
+}
+
+.dropdown__container__inner {
+  -webkit-animation: expand 0.3s linear;
+          animation: expand 0.3s linear;
+}
+/*# sourceMappingURL=Selection.module.css.map */

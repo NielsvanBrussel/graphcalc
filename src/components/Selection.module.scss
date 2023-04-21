@@ -1,0 +1,64 @@
+
+
+@import '../styles/shared/colours';
+@import '../styles/shared/keyframes';
+
+
+
+
+.container {
+    width: 100%;
+    margin: 0 0 auto 0;
+    position: relative;
+}
+
+.container__inner {
+    position: absolute;
+    background-color: white;
+    color: $colour-blue-medium;
+    width: 100%;
+    border: solid $colour-blue-light 2px;
+}
+
+.selection__displaybox {
+    padding: 0rem 1rem;
+}
+
+
+.selection__item__selected, .selection__item__option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.selection__item__selected {
+    justify-content: space-between;
+}
+
+.selection__item__option {
+    justify-content: flex-start;
+    padding: 0rem 1rem;
+}
+
+.selection__item__option:hover {
+    background-color: $colour-blue-light !important;
+}
+
+
+
+.formula__colour {
+    height: 1rem;
+    width: 1rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+    margin: auto 0;
+}
+
+.dropdown__container__outer {
+    overflow: hidden;
+    border-top: solid $colour-blue-light 2px;
+}
+
+.dropdown__container__inner {
+    animation: expand 0.3s linear;
+}
