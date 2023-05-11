@@ -1,20 +1,41 @@
-@import '../styles/shared/colours';
-@import '../styles/shared/keyframes';
+@import './styles/shared/colours';
+@import './styles/shared/keyframes';
 
 .section__container {
     margin: 2rem 0rem;
-    border: white solid 2px;
+    border: $colour-grey-light solid 2px;
     width: auto;
     background-color: $colour-blue-medium;
     position: relative;
     .section__content {
         padding: 3rem 3vw;
-        color: white;
+        color: $colour-grey-light;
         background-color: $colour-blue-medium;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+        position: relative;
+        .section__info__button__container {
+            position: absolute;
+            top: 1rem;
+            right: 2vw;
+            z-index: 3;
+            .info__button {
+                cursor: pointer;
+            }
+        }
+        .section__info__container {
+            position: absolute;
+            z-index: 3;
+            top: -12rem;
+            right: 6vw;
+            border: solid 2px $colour-blue-light;
+            padding: 1rem 2vw;
+            background-color: $colour-grey-light;
+            color: $colour-blue-medium;
+            animation: fading-in forwards linear 0.5s;
+        }
         .section__header__container {
             width: 100%;
             align-items: center;
@@ -37,7 +58,7 @@
         .formula__input__add__inner {
             margin: 1rem auto;
             .formula__input__add__icon {
-                color: white;
+                color: $colour-grey-light;
                 cursor: pointer;
             }  
             .formula__input__add__icon:hover {

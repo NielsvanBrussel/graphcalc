@@ -81,11 +81,12 @@
   width: 100%;
   margin: 0 0 auto 0;
   position: relative;
+  cursor: pointer;
 }
 
 .container__inner {
-  position: absolute;
-  background-color: white;
+  position: relative;
+  background-color: #EDEDED;
   color: #191F45;
   width: 100%;
   border: solid #7a7f9d 2px;
@@ -93,6 +94,7 @@
 
 .selection__displaybox {
   padding: 0rem 1rem;
+  position: relative;
 }
 
 .selection__item__selected, .selection__item__option {
@@ -131,8 +133,13 @@
 }
 
 .dropdown__container__outer {
+  position: absolute;
   overflow: hidden;
-  border-top: solid #7a7f9d 2px;
+  background-color: #EDEDED;
+  left: -2px;
+  border: solid #7a7f9d 2px;
+  width: 100%;
+  z-index: 10;
 }
 
 .dropdown__container__inner {

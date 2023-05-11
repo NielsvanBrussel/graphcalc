@@ -112,31 +112,31 @@
 }
 
 .default .form .input {
-  border-bottom: solid 2px white;
+  border-bottom: solid 2px #EDEDED;
 }
 
 .default .form .input::-webkit-input-placeholder {
-  color: white;
+  color: #EDEDED;
   opacity: 0.5;
 }
 
 .default .form .input:-ms-input-placeholder {
-  color: white;
+  color: #EDEDED;
   opacity: 0.5;
 }
 
 .default .form .input::-ms-input-placeholder {
-  color: white;
+  color: #EDEDED;
   opacity: 0.5;
 }
 
 .default .form .input::placeholder {
-  color: white;
+  color: #EDEDED;
   opacity: 0.5;
 }
 
 .inverted {
-  background-color: white;
+  background-color: #EDEDED;
   color: #191F45;
 }
 

@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAGA,AAAA,+BAA+B,CAAC;EAC5B,MAAM,EAAE,SAAS;EACjB,OAAO,EAAE,WAAW;EACpB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,MAAM;EACvB,KAAK,EAAE,GAAG;EACV,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,eAAe;EACvB,gBAAgB,EAAE,KAAK;CAC1B;;AAED,AAAA,iCAAiC,CAAC;EAC9B,OAAO,EAAE,IAAI;CAChB",
+    "mappings": "AAEA,AAAA,+BAA+B,CAAC;EAC5B,MAAM,EAAE,SAAS;EACjB,OAAO,EAAE,WAAW;EACpB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,MAAM;EACvB,KAAK,EAAE,GAAG;EACV,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,eAAe;EACvB,gBAAgB,ECSI,OAAO;CDR9B;;AAED,AAAA,iCAAiC,CAAC;EAC9B,OAAO,EAAE,IAAI;CAChB",
     "sources": [
-        "../components/DataInput.module.scss"
+        "../components/DataInput.module.scss",
+        "shared/_colours.scss"
     ],
     "names": [],
     "file": "DataInput.module.css"

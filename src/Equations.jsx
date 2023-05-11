@@ -4,10 +4,12 @@ import * as d3 from 'd3'
 import { v4 as uuidv4 } from 'uuid';
 import styles from './styles/Equations.module.css'
 import { MdAddBox } from 'react-icons/md'
+import { BsInfoLg } from 'react-icons/bs'
 import InputField from './components/InputField';
 import FormulaInput from './components/FormulaInput';
 import Intersections from './components/Intersections';
 import calcFormulaData from './utility/calcFormulaData';
+import MinMax from './components/MinMax';
 
 const Equations = () => {
 
@@ -38,6 +40,10 @@ const Equations = () => {
 
     // state to trigger recalculation after range/incr changes 
     const [recalculateCheck, setRecalculateCheck] = useState(false)
+
+    // show info on hover
+
+    const [showInfo, setShowInfo] = useState(false)
 
 
     // recalculate all new values of each equation when range/incr changes
@@ -119,19 +125,19 @@ const Equations = () => {
                 <div className={styles.formula__controls__container__inputs}>
                         <div className={styles.input__container}>
                             <InputField 
-                                label="bottom X range"
+                                label="min X value"
                                 value={bottomXRange}
                                 setValue={setBottomXRange}
-                                placeholder="enter the bottom range of X"
+                                placeholder="enter the minimum value of X"
                                 variant='inverted'
                             />
                         </div>
                         <div className={styles.input__container}>
                             <InputField 
-                                label="top X range"
+                                label="max X value"
                                 value={topXRange}
                                 setValue={setTopXRange}
-                                placeholder="enter the top range of X"
+                                placeholder="enter the maximum value of X"
                                 variant='inverted'
                             />
                         </div>
@@ -148,6 +154,22 @@ const Equations = () => {
                 </div>
                 <div className={styles.section__container}>
                     <div className={styles.section__content}>
+                        <div className={styles.section__info__button__container}>
+                            <BsInfoLg onMouseEnter={() => setShowInfo(true)} onMouseLeave={() => setShowInfo(false)} className={styles.info__button} size={40}/>
+                        </div>
+                        { showInfo && 
+                            <div className={styles.section__info__container}>
+                                <h3>accepted operators</h3>
+                                <p>*,&nbsp; /,&nbsp; +,&nbsp; -,&nbsp; ^,&nbsp; sin(),&nbsp; cos(),&nbsp; tan(),&nbsp; log()</p>
+                                <h3>examples</h3>
+                                <p>f(x) = 2x + 5x^2 -3 &nbsp; (* operator is allowed to be omitted in front of x)</p>
+                                <p>f(x) = sin(x) / cos(x+2)</p>
+                                <p>f(x) = x^(-1/2) &nbsp; (for root calculations use the ^(-1/2) notation)</p>
+                                <p>f(x) = 2x + sin(π) &nbsp; </p>
+                                <h3>if you receive an error try adding/checking brackets!</h3>
+                                <h3>imaginary numbers will not be calculated</h3>
+                            </div>
+                        }
                         <div className={styles.section__header__container}>
                             <h1 className={styles.section__header}>Equations</h1>
                         </div>
@@ -175,6 +197,9 @@ const Equations = () => {
                         }
                     </div>
                 </div>
+                {tabs.length > 0 && 
+                    <MinMax tabs={tabs}/>          
+                }
                 {tabs.length > 1 && 
                     <Intersections tabs={tabs}/>          
                 }

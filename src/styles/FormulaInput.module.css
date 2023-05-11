@@ -65,7 +65,7 @@
 
 @-webkit-keyframes create-error {
   0% {
-    border: white solid 0.15rem;
+    border: #EDEDED solid 0.15rem;
   }
   100% {
     border: red solid 0.15rem;
@@ -74,7 +74,7 @@
 
 @keyframes create-error {
   0% {
-    border: white solid 0.15rem;
+    border: #EDEDED solid 0.15rem;
   }
   100% {
     border: red solid 0.15rem;
@@ -147,7 +147,7 @@
 .formula__container {
   margin: 0;
   width: 100%;
-  background-color: white;
+  background-color: #EDEDED;
   color: #191F45;
   position: relative;
 }

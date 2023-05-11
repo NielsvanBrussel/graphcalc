@@ -3,12 +3,12 @@
 
 .section__container {
     margin: 2rem 0rem;
-    border: white solid 2px;
+    border: $colour-grey-light solid 2px;
     width: auto;
     background-color: $colour-blue-medium;
     .section__content {
         padding: 3rem 3vw 4rem 3vw;
-        color: white;
+        color: $colour-grey-light;
         background-color: $colour-blue-medium;
     }
     .section__header__container {

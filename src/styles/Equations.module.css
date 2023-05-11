@@ -79,7 +79,7 @@
 
 .section__container {
   margin: 2rem 0rem;
-  border: white solid 2px;
+  border: #EDEDED solid 2px;
   width: auto;
   background-color: #191F45;
   position: relative;
@@ -87,7 +87,7 @@
 
 .section__container .section__content {
   padding: 3rem 3vw;
-  color: white;
+  color: #EDEDED;
   background-color: #191F45;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,6 +101,31 @@
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  position: relative;
+}
+
+.section__container .section__content .section__info__button__container {
+  position: absolute;
+  top: 1rem;
+  right: 2vw;
+  z-index: 3;
+}
+
+.section__container .section__content .section__info__button__container .info__button {
+  cursor: pointer;
+}
+
+.section__container .section__content .section__info__container {
+  position: absolute;
+  z-index: 3;
+  top: -12rem;
+  right: 6vw;
+  border: solid 2px #7a7f9d;
+  padding: 1rem 2vw;
+  background-color: #EDEDED;
+  color: #191F45;
+  -webkit-animation: fading-in forwards linear 0.5s;
+          animation: fading-in forwards linear 0.5s;
 }
 
 .section__container .section__content .section__header__container {
@@ -142,7 +167,7 @@
 }
 
 .section__container .formula__input__add__outer .formula__input__add__inner .formula__input__add__icon {
-  color: white;
+  color: #EDEDED;
   cursor: pointer;
 }
 

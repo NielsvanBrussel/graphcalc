@@ -67,9 +67,7 @@ const FormulaInput = ({
             const newData = calcFormulaData({formula: formula, topXRange: topXRange, bottomXRange: bottomXRange, rangeIncrement: rangeIncrement, item: item, dataCopy: dataCopy})
             if (newData.error) {
                 createError(newData.error)
-            }
-            if (newData.data) {
-                console.log(newData)
+            } else if (newData.data) {
                 setData(newData.data)
             }
          
@@ -83,7 +81,7 @@ const FormulaInput = ({
       
             <div className={styles.container}>
                 <div className={validFormula? (`${styles.formula__container} ${styles.valid}`): (`${styles.formula__container} ${styles.invalid}`)}>
-                    <form className={styles.formula__form}>
+                    <form onSubmit={e => { e.preventDefault() }} className={styles.formula__form}>
                         <label className={styles.formula__label}>
                             <div className={styles.label__container}>
                                 <div className={styles.formula__colour} style={{ backgroundColor: item.colour }}></div>

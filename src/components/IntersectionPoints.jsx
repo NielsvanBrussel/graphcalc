@@ -23,7 +23,7 @@ const IntersectionPoints = ({formulaA, formulaB}) => {
 
       return (
         <div style={{ margin: '2rem' }}>
-          <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem', alignItems: 'top', flexWrap: 'wrap', justifyContent: 'space-between'}}>
+          <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem', alignItems: 'top', flexWrap: 'wrap', justifyContent: 'flex-start'}}>
             {intersections.length > 0 ? 
               <>
                 { intersections.map((point, index) => {

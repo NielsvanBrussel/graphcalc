@@ -72,10 +72,10 @@
     color: white;
     .form {
         .input {
-            border-bottom: solid 2px white;
+            border-bottom: solid 2px $colour-grey-light;
         }
         .input::placeholder {
-            color: white;
+            color: $colour-grey-light;
             opacity: 0.5;
         }
         .input:focus {
@@ -85,7 +85,7 @@
 }
 
 .inverted {
-    background-color: white;
+    background-color: $colour-grey-light;
     color: $colour-blue-medium;
     .form {
         .input {

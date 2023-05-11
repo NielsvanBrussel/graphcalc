@@ -35,7 +35,7 @@
 
 @keyframes create-error {
     0% {
-        border: white solid 0.15rem;
+        border: $colour-grey-light solid 0.15rem;
     }
     100% {
         border: red solid 0.15rem;
@@ -85,7 +85,7 @@
     margin: 0;
     width: 100%;
     
-    background-color: white;
+    background-color: $colour-grey-light;
     color: $colour-blue-medium;
     position: relative;
     .formula__form {

@@ -24,8 +24,6 @@ const calcFormulaData = ({formula, topXRange,bottomXRange, rangeIncrement, item,
                                     .replaceAll('log', 'Math.log')
                                     .replaceAll(/π/g, 'Math.PI')
 
-                                    console.log(convertedFormula)
-
         // custom loop, Math functions to counter infinite loop errors
         for (let valueX = Math.min(bottomXRange, topXRange); valueX <= Math.max(bottomXRange, topXRange); valueX += Math.abs(rangeIncrement)) {
             try {

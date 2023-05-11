@@ -10,11 +10,12 @@
     width: 100%;
     margin: 0 0 auto 0;
     position: relative;
+    cursor: pointer;
 }
 
 .container__inner {
-    position: absolute;
-    background-color: white;
+    position: relative;
+    background-color: $colour-grey-light;
     color: $colour-blue-medium;
     width: 100%;
     border: solid $colour-blue-light 2px;
@@ -22,6 +23,7 @@
 
 .selection__displaybox {
     padding: 0rem 1rem;
+    position: relative;
 }
 
 
@@ -55,8 +57,13 @@
 }
 
 .dropdown__container__outer {
+    position: absolute;
     overflow: hidden;
-    border-top: solid $colour-blue-light 2px;
+    background-color: $colour-grey-light;
+    left: -2px;
+    border: solid $colour-blue-light 2px;
+    width: 100%;
+    z-index: 10;
 }
 
 .dropdown__container__inner {
