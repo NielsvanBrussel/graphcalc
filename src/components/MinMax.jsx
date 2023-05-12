@@ -43,11 +43,18 @@ const MinMax = ({ tabs }) => {
         let valuesArray = []
         xValues.forEach(x => {
             if (x) {
+
                 const y = nerdamer(selectedEq.formula, {x: x}).evaluate().text();
                 console.log(y)
-                const minOrMax = nerdamer(x2, {x: x}, 'numer').evaluate().text();
+                const minOrMax = nerdamer(x2, {x: x}, 'numer').evaluate();
+                let max
+                if (minOrMax.lt('0')) {
+                  max = true
+                } else if (minOrMax.gt('0')) {
+                  max = false
+                }
                 console.log(minOrMax)
-                const item = {x: x, y: y}
+                const item = {x: x, y: y, max: max}
                 valuesArray.push(item)                
             }
         });
@@ -74,18 +81,20 @@ const MinMax = ({ tabs }) => {
             <Selection setEquation={setSelectedEq} equation={selectedEq} altEquation={null} tabs={tabs}/>        
         </div>
         {firstDerivative && selectedEq &&
-        <div>
-            <p>{insertBeforeLastOccurrence(selectedEq.title, firstString)} = {firstDerivative}</p>
-            <p>{insertBeforeLastOccurrence(selectedEq.title, secondString)} = {secondDerivative}</p>
+        <div style={{ textAlign: 'left', margin: '1rem' }}>
+            <p style={{ fontSize: '1.5rem'}}>{insertBeforeLastOccurrence(selectedEq.title, firstString)} = &nbsp;{firstDerivative}</p>
+            <p style={{ fontSize: '1.5rem'}}>{insertBeforeLastOccurrence(selectedEq.title, secondString)} = &nbsp;{secondDerivative}</p>
         </div>
         }
         {(minMaxPoints.length > 0 && selectedEq) ?
             <div>
                 {minMaxPoints.map((point, index) => {
                     return (
-                        <div key={index} style={{ margin: '1rem' }}>    
-                            <h4>point {index + 1}.</h4>
-                            <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem' }}>
+                        <div key={index} style={{ margin: '0rem 1rem' }}>    
+                            <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem', alignItems: 'center' }}>
+                                <h4>{index + 1}.</h4>
+                                {point.max === true && <p>maximum</p>}
+                                {point.max === false && <p>minimum</p>}
                                 <p>X: {point.x}</p>
                                 <p>Y: {point.y}</p>
                             </div>
