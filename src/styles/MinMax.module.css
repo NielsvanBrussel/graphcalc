@@ -48,8 +48,66 @@
   }
 }
 
+.points__flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.point__container__outer {
+  margin: 1rem;
+  width: 45%;
+}
+
+.point__container__outer .point__container__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h4 {
+  margin: 0;
+}
+
 p {
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 56rem) {
+  .point__container__outer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 30rem) {
+  .point__container__outer .point__container__inner {
+    gap: 0.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    overflow: hidden;
+  }
 }
 /*# sourceMappingURL=MinMax.module.css.map */

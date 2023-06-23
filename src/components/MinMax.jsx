@@ -83,11 +83,11 @@ const MinMax = ({ tabs }) => {
         </div>
         }
         {(minMaxPoints.length > 0 && selectedEq) ?
-            <div>
+            <div className={styles.points__flexbox}>
                 {minMaxPoints.map((point, index) => {
                     return (
-                        <div key={index} style={{ margin: '0rem 1rem' }}>    
-                            <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem', alignItems: 'center', overflow: 'hidden' }}>
+                        <div key={index} className={styles.point__container__outer}>    
+                            <div className={styles.point__container__inner}>
                                 <h4>{index + 1}.</h4>
                                 {point.max === true && <p>maximum</p>}
                                 {point.max === false && <p>minimum</p>}

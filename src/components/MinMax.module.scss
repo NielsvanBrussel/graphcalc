@@ -1,7 +1,50 @@
 @import './Intersections.module.scss';
 
 
+
+.points__flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.point__container__outer {
+    margin: 1rem;
+    width: 45%;
+    .point__container__inner {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center; 
+    }
+}
+
+h4 {
+    margin: 0;
+}
+
+
 p {
     margin: 0;
     padding: 0;
+}
+
+@media(max-width: 56rem){
+    .point__container__outer {
+        width: 100%;     
+    }
+
+}
+
+@media(max-width: 30rem){
+    .point__container__outer {
+        .point__container__inner {
+            gap: 0.5rem;
+            flex-direction: column;
+            align-items: start;
+            overflow: hidden;
+        }        
+    }
+
 }
