@@ -87,7 +87,7 @@ const MinMax = ({ tabs }) => {
                 {minMaxPoints.map((point, index) => {
                     return (
                         <div key={index} style={{ margin: '0rem 1rem' }}>    
-                            <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem', alignItems: 'center' }}>
+                            <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem', alignItems: 'center', overflow: 'hidden' }}>
                                 <h4>{index + 1}.</h4>
                                 {point.max === true && <p>maximum</p>}
                                 {point.max === false && <p>minimum</p>}
