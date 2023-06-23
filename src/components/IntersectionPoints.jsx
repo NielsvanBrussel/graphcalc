@@ -70,7 +70,7 @@ const IntersectionPoints = ({formulaA, formulaB}) => {
                   }
 
                   return (
-                        <div key={index} style={{ margin: '1rem' }}>    
+                        <div key={index} style={{ margin: '1rem', overflow: 'hidden' }}>    
                             <h4>Intersection {index + 1}.</h4>
                             <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem' }}>
                                 <p>X: {valueX}</p>
