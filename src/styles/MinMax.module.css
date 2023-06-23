@@ -37,4 +37,19 @@
 .section__container .selection__container .iconbox {
   margin: 1.25rem 0 auto 0;
 }
+
+@media (max-width: 56rem) {
+  .selection__container {
+    gap: 0.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
 /*# sourceMappingURL=MinMax.module.css.map */

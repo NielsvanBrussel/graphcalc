@@ -97,7 +97,7 @@
   position: relative;
 }
 
-.selection__item__selected, .selection__item__option {
+.selection__item__selected, .selection__item__option, .selection__item__option__fake {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,7 +113,7 @@
           justify-content: space-between;
 }
 
-.selection__item__option {
+.selection__item__option, .selection__item__option__fake {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;

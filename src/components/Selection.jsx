@@ -45,6 +45,12 @@ const Selection = ({ tabs, equation, setEquation, altEquation }) => {
         )
     }
 
+    const options = tabs.filter(item => 
+        item.title !== equation?.title && item.title !== altEquation?.title
+    )
+
+    console.log(options)
+
 
   return (
     <div ref={wrapperRef} className={styles.container}>
@@ -69,9 +75,14 @@ const Selection = ({ tabs, equation, setEquation, altEquation }) => {
         {dropdown &&
         <div className={styles.dropdown__container__outer}>
             <div className={styles.dropdown__container__inner}>
-                {tabs.map(item => 
-                    item.title !== equation?.title && item.title !== altEquation?.title && <SelectionItem item={item} key={item.colour} />
+                {options.map(item => 
+                    <SelectionItem item={item} key={item.colour} />
                 )}
+                {options.length === 0 && 
+                    <div className={styles.selection__item__option} onClick={() => selectItem("")}>
+                        <h3>No equation</h3>
+                    </div>
+                }
             </div>
         </div>
         }

@@ -29,3 +29,10 @@
             }
     }
 }
+
+@media(max-width: 56rem){
+    .selection__container {
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+}

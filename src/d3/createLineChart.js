@@ -198,19 +198,31 @@ const createLineChartSvg = ({lineChartRef, rawData, xAxisUnit, yAxisUnit, autoSo
                 try {
 
                     // get the closest value to the x-coordinates of your mouse
-                    const output = data.reduce((prev, curr) => Math.abs(curr.x - x0) < Math.abs(prev.x - x0) ? curr: prev)
+                    const outputX = data.reduce((prev, curr) => Math.abs(curr.x - x0) < Math.abs(prev.x - x0) ? curr: prev)
+                    const outputY = data.reduce((prev, curr) => Math.abs(curr.y - y0) < Math.abs(prev.y - y0) ? curr: prev)
 
                     // if there are multiple data points for this x-value make an array
                     const closestXValuesArray = data.filter(item => {
-                        return item.x === output.x
+                        return item.x === outputX.x
                     })
 
+                    const closestYValuesArray = data.filter(item => {
+                        return item.y === outputY.y
+                    })
+
+                    const closestValuesArray = closestXValuesArray.concat(closestYValuesArray)
+
+                    console.log(closestValuesArray)
+
                     // get the closest value to the Y-coordinates of your mouse
-                    const closestValue =  closestXValuesArray.reduce((prev, curr) => Math.abs(curr.y - y0) < Math.abs(prev.y - y0) ? curr: prev)
+                    // const closestValue =  closestXValuesArray.reduce((prev, curr) => Math.abs(curr.y - y0) < Math.abs(prev.y - y0) ? curr: prev)
+
+                    const closestValue =  closestValuesArray.reduce((prev, curr) => Math.sqrt((Math.abs(curr.y - y0) ** 2) + (Math.abs(curr.x - x0) ** 2)) < Math.sqrt((Math.abs(prev.y - y0) ** 2) + (Math.abs(prev.x - x0) ** 2)) ? curr: prev)
+
 
     
                     // calc how long the numbers in the box will be and adjust the width accordingly
-                    const widthAdjustment = Math.max(output.x, output.y).toString().length 
+                    const widthAdjustment = Math.max(outputX.x, outputX.y).toString().length 
                 
                     focus
                         .attr("cx", xScale(closestValue.x))

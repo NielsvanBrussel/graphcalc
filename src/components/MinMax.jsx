@@ -37,15 +37,13 @@ const MinMax = ({ tabs }) => {
 
         // calc x values of crit numbers and their y values
         const critNumbers = nerdamer.solveEquations(`${x1}=0`,'x');
-        console.log(typeof critNumbers)
         const xValues = critNumbers.toString().replaceAll(/\[|\]/g, '').split(",")
-        console.log(xValues)
+
         let valuesArray = []
         xValues.forEach(x => {
             if (x) {
 
                 const y = nerdamer(selectedEq.formula, {x: x}).evaluate().text();
-                console.log(y)
                 const minOrMax = nerdamer(x2, {x: x}, 'numer').evaluate();
                 let max
                 if (minOrMax.lt('0')) {
@@ -53,14 +51,12 @@ const MinMax = ({ tabs }) => {
                 } else if (minOrMax.gt('0')) {
                   max = false
                 }
-                console.log(minOrMax)
                 const item = {x: x, y: y, max: max}
                 valuesArray.push(item)                
             }
         });
         setMinMaxPoints(valuesArray)
     } catch (error) {
-        console.log(error)
         setMinMaxPoints([])
     }
   }

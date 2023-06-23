@@ -27,7 +27,7 @@
 }
 
 
-.selection__item__selected, .selection__item__option {
+.selection__item__selected, .selection__item__option, .selection__item__option__fake {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -37,7 +37,7 @@
     justify-content: space-between;
 }
 
-.selection__item__option {
+.selection__item__option, .selection__item__option__fake {
     justify-content: flex-start;
     padding: 0rem 1rem;
 }
