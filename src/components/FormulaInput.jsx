@@ -53,7 +53,7 @@ const FormulaInput = ({
         saveFormula()
 
         // check if formula has a valid input
-        const validFormula = /^(?=.{1,50}$)(([\dxX^()*\/\-.+π\s]|(?:\b[\d]*?sin\b|\b[\d]*tan\b|\b[\d]*cos\b|\b[\d]*log\b)))*$/ig.test(formula)
+        const validFormula = /^(?=.{1,100}$)(([\dxX^()*\/\-.+π\s]|(?:\b[\d]*?sin\b|\b[\d]*tan\b|\b[\d]*cos\b|\b[\d]*log\b)))*$/ig.test(formula)
         // length between 1-50, symbols between [] (\s = whitespace, \d is any digit, whole words between \b's)
         
         // get a copy of current data and clear old data of this formula

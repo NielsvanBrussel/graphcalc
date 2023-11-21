@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import nerdamer from "nerdamer/all.js";
+import styles from '../styles/MinMax.module.css'
 
 const IntersectionPoints = ({formulaA, formulaB}) => {
 
@@ -49,8 +50,8 @@ const IntersectionPoints = ({formulaA, formulaB}) => {
 
 
       return (
-        <div style={{ margin: '2rem' }}>
-          <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem', alignItems: 'top', flexWrap: 'wrap', justifyContent: 'flex-start'}}>
+      
+          <div className={styles.points__flexbox} style={{ marginTop: '2rem'}}>
             {(intersections.length > 0 && !error)? 
               <>
                 { intersections.map((point, index) => {
@@ -70,12 +71,12 @@ const IntersectionPoints = ({formulaA, formulaB}) => {
                   }
 
                   return (
-                        <div key={index} style={{ margin: '1rem', overflow: 'hidden' }}>    
+                        <div key={index} className={styles.point__container__outer}> 
+                          <div className={styles.point__container__inner}>
                             <h4>Intersection {index + 1}.</h4>
-                            <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem' }}>
-                                <p>X: {valueX}</p>
-                                <p>Y: {valueY}</p>
-                            </div>
+                            <p>X: {valueX}</p>
+                            <p>Y: {valueY}</p>
+                          </div>
                         </div>
                   )
                 })}
@@ -86,7 +87,7 @@ const IntersectionPoints = ({formulaA, formulaB}) => {
               </div>
             }
           </div>
-        </div>
+   
       )
 }
 

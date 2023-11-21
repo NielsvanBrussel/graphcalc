@@ -49,8 +49,6 @@ const Selection = ({ tabs, equation, setEquation, altEquation }) => {
         item.title !== equation?.title && item.title !== altEquation?.title
     )
 
-    console.log(options)
-
 
   return (
     <div ref={wrapperRef} className={styles.container}>

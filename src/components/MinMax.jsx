@@ -77,7 +77,7 @@ const MinMax = ({ tabs }) => {
             <Selection setEquation={setSelectedEq} equation={selectedEq} altEquation={null} tabs={tabs}/>        
         </div>
         {firstDerivative && selectedEq &&
-        <div style={{ textAlign: 'left', margin: '1rem' }}>
+        <div className={styles.section__derivate__container}>
             <p style={{ fontSize: '1.5rem'}}>{insertBeforeLastOccurrence(selectedEq.title, firstString)} = &nbsp;{firstDerivative}</p>
             <p style={{ fontSize: '1.5rem'}}>{insertBeforeLastOccurrence(selectedEq.title, secondString)} = &nbsp;{secondDerivative}</p>
         </div>
@@ -88,9 +88,7 @@ const MinMax = ({ tabs }) => {
                     return (
                         <div key={index} className={styles.point__container__outer}>    
                             <div className={styles.point__container__inner}>
-                                <h4>{index + 1}.</h4>
-                                {point.max === true && <p>maximum</p>}
-                                {point.max === false && <p>minimum</p>}
+                                <h4>{index + 1}.  {point.max === true ? "maximum" : "minimum"}</h4>
                                 <p>X: {point.x}</p>
                                 <p>Y: {point.y}</p>
                             </div>
